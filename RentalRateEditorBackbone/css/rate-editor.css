@@ -1,0 +1,42 @@
+﻿.rental-rate-table {
+  width:  100%;  
+}
+
+.rental-rate-table tr {
+  text-align: left;
+}
+
+.rental-rate-table td, .rental-rate-table th {
+  padding: 7px 0;
+}
+  
+#rate-editor-container { 
+  width:  350px;
+  padding:  20px;
+  background-color:  #fff;
+  border: 1px solid #000;
+}
+
+#rate-editor > div > label {
+  font-weight: bold;
+}
+
+#tier-rows {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+}
+
+.tier-row {
+  padding: 5px;  
+  height: 30px;
+}
+
+.tier-row:hover {
+  background-color:  #808080;
+}
+
+.tier-row input {
+  width:  30px;
+}
+
