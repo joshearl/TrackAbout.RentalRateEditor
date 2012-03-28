@@ -1,0 +1,206 @@
+﻿OCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Home Page</title>
+  <link href="/css/lib/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="/css/lib/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+  <link href="/css/util.css" rel="stylesheet" type="text/css" />
+  <link href="/css/trackabout.css" rel="stylesheet" type="text/css" />
+  <link href="/css/rate-editor.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">TrackAbout vNext</a>
+          <ul class="nav pull-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Air Liquide<b class="caret"></b> </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Butler Gas</a></li>
+                <li><a href="#">Cee Kay</a></li>
+                <li><a href="#">Linweld</a></li>
+                <li><a href="#">Sizewise</a></li>
+                <li><a href="#">SUPAGAS</a></li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">Help</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">Contact Support</a></li>
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Options <b class="caret"></b> </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Display</a></li>
+                <li><a href="#">Search</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Client Configurations</a></li>
+                <li><a href="#">Page Permissions</a></li>
+                <li><a href="#">Imports/Exports</a></li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row-fluid subnav-row">
+        <div class="subnav">
+          <ul class="nav nav-pills">
+            <li><a href="#">Production</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Rental</a></li>
+            <li class="active"><a href="#">Super User</a></li>
+          </ul>
+        </div>
+        <form class="jump-box">
+          <input type="text" placeholder="Jump to ..." />
+        </form>
+      </div>
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well" style="padding: 2px">
+            <ul class="nav nav-list">
+              <li class="nav-header">General Tools</li>
+              <li><a href="#">Clean Agreement Form Templates</a></li>
+              <li><a href="#">Delete Multiple Records</a></li>
+              <li><a href="#">Merge Assets</a></li>
+              <li><a href="#">Merge Customers</a></li>
+              <li><a href="#">Quick Asset Detach</a></li>
+              <li><a href="#">Reattach All Assets</a></li>
+              <li><a href="#">Run Urls</a></li>
+              <li><a href="#">Split Asset History</a></li>
+              <li><a href="#">Super Record Edit</a></li>
+              <li><a href="#">Tracking Invoice</a></li>
+              <li><a href="#">Web Service Integration Utils</a></li>
+              <li class="nav-header">Client/User Maintenance</li>
+              <li><a href="#">Add New Client</a></li>
+              <li><a href="#">Bulk Replace Mobile Passwords</a></li>
+              <li><a href="#">Client Feature Usage</a></li>
+              <li><a href="#">Client Logo for Printing</a></li>
+              <li><a href="#">Configure Imports/Exports</a></li>
+              <li><a href="#">Customer Map</a></li>
+              <li><a href="#">Edit Client Configuration</a></li>
+              <li><a href="#">Flush Client Configuration</a></li>
+              <li><a href="#">Generate Client Sync Key</a></li>
+              <li><a href="#">Logins</a></li>
+              <li><a href="#">Page Permissions</a></li>
+              <li><a href="#">Reset Jeff's Password</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+
+<section id="main">
+      <h2>Rental Rate Editor</h2>
+      <table class="rental-rate-table">
+        <thead>
+          <tr>
+            <th>Edit</th>
+            <th>Rental Class</th>
+            <th>Rental Method</th>
+            <th>Daily</th>
+            <th>Weekly</th>
+            <th>Monthly</th>
+            <th>Tiers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a class="edit-link" href="#">Edit</a></td>
+            <td>Bulk Tanks::Industrial</td>
+            <td>Monthly</td>
+            <td></td>
+            <td></td>
+            <td>0.50</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a class="edit-link" href="#">Override</a></td>
+            <td>Bulk Tanks::Production</td>
+            <td>Weekly</td>
+            <td></td>
+            <td>0.75</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a class="edit-link" href="#">Override</a></td>
+            <td>Medical Gases</td>
+            <td>Daily</td>
+            <td>0.50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a class="edit-link" href="#">Edit</a></td>
+            <td>Bulk Tanks::Production</td>
+            <td>Weekly</td>
+            <td></td>
+            <td>0.85</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="rate-editor-container" class="hide"></div>
+    </section>
+        </div>
+      </div>
+    </div>
+    <footer>
+    </footer>
+    
+  <script type="text/template" id="tier-template">
+    <input type="text" class="tier-minimum" value="<%= minimum %>" />
+    <input type="text" class="tier-maximum"  value="<%= maximum %>"/>
+    <input type="text" class="tier-price" value="<%= price %>" />
+    <button class="split-tier">Split</button>
+    <button class="delete-tier">Delete</button>
+  </script>
+  <script type="text/template" id="rate-editor-template">
+    <div id="rate-editor">
+      <h3>Edit Rates</h3>
+      <label>Rental Method</label>
+      <select id="rental-method-selector">
+        <option>No Override</option>
+        <option>Daily</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+      </select>
+      <div id="tier-list" class="hide">
+        <label class="inline">Minimum</label>
+        <label class="inline">Maximum</label>
+        <label class="inline">Price</label>
+        <ul id="tier-rows"></ul>
+      </div>
+      <button id="done" class="done">Done</button>
+    </div>
+  </script>
+    
+  <script src="/javascript/lib/jquery-1.7.1.js" type="text/javascript"></script>
+  <script src="/javascript/lib/bootstrap.js" type="text/javascript"></script>
+  <script src="/javascript/lib/bpopup-0.6.0.min.js" type="text/javascript"></script>
+  <script src="/javascript/lib/underscore.js" type="text/javascript"></script>
+  <script src="/javascript/lib/backbone.js" type="text/javascript"></script>
+  <script src="/javascript/lib/backbone.neighbors.js" type="text/javascript"></script>
+  <script src="/javascript/src/events.js" type="text/javascript"></script>
+  <script src="/javascript/src/tier.js" type="text/javascript"></script>
+  <script src="/javascript/src/tiers.js" type="text/javascript"></script>
+  <script src="/javascript/src/tier-view.js" type="text/javascript"></script>
+  <script src="/javascript/src/rate-editor.js" type="text/javascript"></script>
+  <script src="/javascript/pages/index.js" type="text/javascript"></script>
+</body>
+</html>
