@@ -1,1 +1,0 @@
-﻿Backbone.View.prototype.eventAggregator = _.extend({}, Backbone.Events);
