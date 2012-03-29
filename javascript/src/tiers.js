@@ -1,4 +1,4 @@
-﻿Tiers = Backbone.NeighborlyCollection.extend({
+﻿Tiers = Backbone.Collection.extend({
   model: Tier,
 
   initialize: function () {
@@ -8,11 +8,15 @@
   },
   
   onTierMinimumChanged: function (tier, value) {
-    tier.get('previousNeighbor').set({ maximum: (value - 1) });
+    var previous = this.previous(tier);
+
+    if (!_.isUndefined(previous)) {
+      previous.set({ maximum: (value - 1) });
+    }
   },
 
   onTierMaximumChanged: function (tier, value) {
-    var next = tier.get('nextNeighbor');
+    var next = this.next(tier);
 
     if (!_.isUndefined(next)) {
       next.set({ minimum: (parseInt(value) + 1) });
@@ -20,8 +24,8 @@
   },
   
   onTierRemoved: function (tier, list, removed) {
-    var next = tier.get('nextNeighbor'),
-          previous = tier.get('previousNeighbor');
+    var previous = this.previous(tier),
+        next = this.next(tier);
 
     next.set({ minimum: (previous.get('maximum') + 1) });
   },
@@ -45,8 +49,8 @@
     }
 
     this.each(function (tier) {
-      var previous = tier.get('previousNeighbor'),
-            next = tier.get('nextNeighbor');
+      var previous = this.previous(tier),
+            next = this.next(tier);
 
       if (!tier.isValid()) {
         valid = false;
@@ -63,7 +67,7 @@
           valid = false;
         }
       }
-    });
+    }, this);
 
     return valid;
   }
